@@ -1,6 +1,7 @@
 require "redis/connection/registry"
 require "redis/connection/command_helper"
 require "redis/errors"
+require "celluloid/current"
 require "celluloid/io"
 
 class Redis
