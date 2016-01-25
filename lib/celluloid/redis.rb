@@ -1,8 +1,8 @@
 require "redis"
 
 require "celluloid/redis/version"
-require "celluloid/current"
 require "celluloid/io"
+require "celluloid/current"
 
 module Celluloid
   class Redis < ::Redis
