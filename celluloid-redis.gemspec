@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tony.arcieri@gmail.com"]
   spec.description   = "Celluloid::IO support for the redis-rb library"
   spec.summary       = "celluloid-redis provides a redis-rb connection class using Celluloid::IO"
-  spec.homepage      = "https://github.com/celluloid/celluloid-redis"
+  spec.homepage      = "https://github.com/schoolstatus/celluloid-redis"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "redis"
-  spec.add_runtime_dependency "celluloid-io", ">= 0.13.0.pre"
+  spec.add_runtime_dependency "celluloid-io", ">= 0.17.3"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
