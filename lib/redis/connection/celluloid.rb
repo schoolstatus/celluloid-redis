@@ -1,8 +1,8 @@
 require "redis/connection/registry"
 require "redis/connection/command_helper"
 require "redis/errors"
-require "celluloid/current"
 require "celluloid/io"
+require "celluloid/current"
 
 class Redis
   module Connection
@@ -18,9 +18,9 @@ class Redis
       def self.connect(config)
         # TODO: config[:timeout] support
         if config[:scheme] == "unix"
-          sock = ::Celluloid::IO::UNIXSocket.open(config[:path])
+          sock = ::Celluloid::IO::UNIXSocket.new(config[:path])
         else
-          sock = ::Celluloid::IO::TCPSocket.open(config[:host], config[:port])
+          sock = ::Celluloid::IO::TCPSocket.new(config[:host], config[:port])
         end
 
         new(sock)
